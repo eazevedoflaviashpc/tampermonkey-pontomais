@@ -12,8 +12,7 @@
 >
 > > 🧾 **Antes de executá-lo em produção (caso ainda não tenha te convencido) faça o seguinte: coloque todos os seus boletos na mesa e medite se vale a pena.**
 >
-> O autor não se responsabiliza por qualquer uso indevido desta ferramenta.
-> ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+> **O autor não se responsabiliza por qualquer uso indevido desta ferramenta.**
 ---
 
 Este guia explica como instalar e configurar o script **Pontomais Automator (agendado)** usando a extensão Tampermonkey no Google Chrome.
