@@ -1,4 +1,4 @@
-# 🕐 Pontomais Auto Bater Ponto — Guia de instalação e uso
+# 🕐 Pontomais Automator — Guia de instalação e uso
 
 > [!WARNING]
 > ## ⚠️ AVISO IMPORTANTE — LEIA ANTES DE CONTINUAR
@@ -15,7 +15,7 @@
 
 ---
 
-Este guia explica como instalar e configurar o script **Pontomais Auto Bater Ponto Agendado** usando a extensão Tampermonkey no Google Chrome.
+Este guia explica como instalar e configurar o script **Pontomais Automator (agendado)** usando a extensão Tampermonkey no Google Chrome.
 
 ---
 
@@ -58,7 +58,7 @@ Para que scripts de usuário funcionem corretamente, é necessário habilitar o 
 ## 4. Instalar o Script
 
 1. Acesse o script pelo link abaixo:
-   👉 [https://greasyfork.org/en/scripts/566798-pontomais-auto-bater-ponto-agendado](https://greasyfork.org/en/scripts/566798-pontomais-auto-bater-ponto-agendado)
+   👉 [[https://greasyfork.org/en/scripts/566798-pontomais-auto-bater-ponto-agendado](https://greasyfork.org/en/scripts/566798-pontomais-automator-agendado)]
 2. Na página do script, clique no botão verde **"Instalar este script"**.
 3. O Tampermonkey abrirá uma nova aba mostrando os detalhes do script.
 4. Clique em **"Instalar"** para confirmar.
