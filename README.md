@@ -14,7 +14,7 @@
 >
 > **O autor não se responsabiliza por qualquer uso indevido desta ferramenta.**
 
- *""I would prefer even to fail with honor than win by cheating.""*
+ *"I would prefer even to fail with honor than win by cheating."*
  — Santa Klaus
 
 ---
