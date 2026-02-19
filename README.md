@@ -1,4 +1,4 @@
-# 🕐 Pontomais Auto Bater Ponto — Guia de Instalação
+# 🕐 Pontomais Auto Bater Ponto — Guia de instalação e uso
 
 > [!WARNING]
 > ## ⚠️ AVISO IMPORTANTE — LEIA ANTES DE CONTINUAR
@@ -9,7 +9,7 @@
 >
 > É **vetado** o uso deste script para burlar sistemas de controle de ponto. As consequências podem variar de acordo com a política de cada empresa — podendo incluir advertências, demissão por justa causa e até implicações legais.
 >
-> > 🧾 **Antes de executá-lo em produção: coloque todos os seus boletos na mesa e medite se vale a pena.**
+> > 🧾 **Antes de executá-lo em produção (caso ainda não tenha te convencido) faça o seguinte: coloque todos os seus boletos na mesa e medite se vale a pena.**
 >
 > O autor não se responsabiliza por qualquer uso indevido desta ferramenta.
 
