@@ -13,6 +13,10 @@
 > > 🧾 **Se estiver cogitando executá-lo em produção - caso ainda não tenha te convencido - faça o seguinte, coloque todos os seus boletos na mesa e medite: "Mas vale a pena?"**
 >
 > **O autor não se responsabiliza por qualquer uso indevido desta ferramenta.**
+
+ *""I would prefer even to fail with honor than win by cheating.""*
+ — Santa Klaus
+
 ---
 
 Este guia explica como instalar e configurar o script **Pontomais Automator (agendado)** usando a extensão Tampermonkey no Google Chrome.
