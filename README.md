@@ -1,155 +1,106 @@
-# 🕐 Pontomais Auto Bater Ponto (Agendado)
+# 🕐 Pontomais Auto Bater Ponto — Guia de Instalação
 
-Script Tampermonkey que bate o ponto automaticamente no [Pontomais](https://app2.pontomais.com.br/registrar-ponto) nos horários agendados, com suporte a acionamento manual e geolocalização configurável.
-
----
-
-## ✅ Requisitos
-
-- Navegador **Google Chrome** (obrigatório)
-- Extensão **Tampermonkey** instalada
-- Conta ativa no **Pontomais**
-
----
-
-## 📦 Instalação
-
-### 1. Instalar o Google Chrome
-
-Caso ainda não tenha o Chrome instalado, baixe em:
-👉 [https://www.google.com/chrome/](https://www.google.com/chrome/)
+> [!WARNING]
+> ## ⚠️ AVISO IMPORTANTE — LEIA ANTES DE CONTINUAR
+>
+> Este script foi criado **exclusivamente para uso em ambientes de testes controlados** e para estudo das possibilidades do JavaScript.
+>
+> **Se a sua empresa não possui automação para lançamento de horas, isso significa que o uso deste script é PROIBIDO.**
+>
+> É **vetado** o uso deste script para burlar sistemas de controle de ponto. As consequências podem variar de acordo com a política de cada empresa — podendo incluir advertências, demissão por justa causa e até implicações legais.
+>
+> > 🧾 **Antes de executá-lo em produção: coloque todos os seus boletos na mesa e medite se vale a pena.**
+>
+> O autor não se responsabiliza por qualquer uso indevido desta ferramenta.
 
 ---
 
-### 2. Instalar a extensão Tampermonkey
+Este guia explica como instalar e configurar o script **Pontomais Auto Bater Ponto Agendado** usando a extensão Tampermonkey no Google Chrome.
 
-1. Abra o Chrome e acesse a Chrome Web Store:
+---
+
+## ✅ Pré-requisitos
+
+- Utilize o navegador **Google Chrome** (obrigatório).
+
+---
+
+## 1. Instalar a Extensão Tampermonkey
+
+1. Abra o Google Chrome.
+2. Acesse a página da extensão na Chrome Web Store pelo link abaixo:
    👉 [https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-2. Clique em **"Usar no Chrome"** e confirme clicando em **"Adicionar extensão"**.
-3. O ícone do Tampermonkey (🧩) aparecerá na barra de ferramentas do Chrome.
+3. Clique em **"Usar no Chrome"** e depois em **"Adicionar extensão"**.
+4. Aguarde a instalação. O ícone do Tampermonkey aparecerá na barra de extensões do Chrome.
 
 ---
 
-### 3. Habilitar o Modo de Desenvolvedor no Chrome
+## 2. Ativar o Modo de Desenvolvedor no Chrome
 
-Para que o Tampermonkey funcione corretamente com scripts externos, é necessário ativar o **Modo de Desenvolvedor** nas extensões:
+Para que scripts de usuário funcionem corretamente, é necessário habilitar o **Modo de Desenvolvedor** nas extensões do Chrome:
 
 1. Abra o Chrome e acesse: `chrome://extensions/`
-2. No canto superior direito da página, ative a chave **"Modo do desenvolvedor"** (Developer mode).
-3. Pronto! O modo de desenvolvedor está ativado.
+2. No canto superior direito da página, ative a opção **"Modo do desenvolvedor"** (toggle).
+3. O modo de desenvolvedor estará ativo quando o toggle ficar azul/ligado.
 
 ---
 
-### 4. Permitir Scripts de Usuário no Tampermonkey
+## 3. Permitir Scripts de Usuário no Tampermonkey
 
 1. Clique no ícone do **Tampermonkey** na barra de ferramentas do Chrome.
-2. Selecione **"Painel"** (Dashboard) ou **"Gerenciar scripts"**.
-3. Vá em **Configurações** (aba Settings / Configurações).
-4. Em **"Modo de segurança"** ou **"Security"**, certifique-se de que a opção de execução de scripts está habilitada.
+2. Selecione **"Painel"** ou **"Dashboard"**.
+3. Vá até a aba **"Configurações"**.
+4. Em **"Modo de acesso a arquivos"** (ou *Script access* / *Allow scripts*), certifique-se de que a opção está habilitada para permitir a execução de scripts.
 5. Salve as alterações se necessário.
 
-> ⚠️ **Importante:** O Chrome pode exibir um aviso pedindo para confirmar o uso de extensões no modo de desenvolvedor. Clique em **"Manter"** para continuar.
-
 ---
 
-### 5. Instalar o Script
+## 4. Instalar o Script
 
-1. Acesse a página do script no Greasy Fork:
+1. Acesse o script pelo link abaixo:
    👉 [https://greasyfork.org/en/scripts/566798-pontomais-auto-bater-ponto-agendado](https://greasyfork.org/en/scripts/566798-pontomais-auto-bater-ponto-agendado)
-2. Clique no botão **"Instalar este script"** (Install this script).
-3. O Tampermonkey abrirá uma nova aba mostrando o código do script.
-4. Clique em **"Instalar"** para confirmar a instalação.
-5. O script aparecerá listado no painel do Tampermonkey com o status **Ativado**.
+2. Na página do script, clique no botão verde **"Instalar este script"**.
+3. O Tampermonkey abrirá uma nova aba mostrando os detalhes do script.
+4. Clique em **"Instalar"** para confirmar.
+5. O script estará ativo e pronto para uso.
 
 ---
 
-## ⚙️ Configuração Pós-Instalação
+## ⚠️ Aviso Importante: Configurar Geolocalização
 
-### 6. Ajustar a Geolocalização
+Após a instalação, é necessário **configurar a geolocalização correta** para que o ponto seja registrado no local correto.
 
-O script simula uma localização GPS para que o Pontomais aceite o registro de ponto. **Você precisa ajustar as coordenadas para a localização correta** (escritório ou local de trabalho).
+1. Acesse o site [https://mylocation.org/](https://mylocation.org/) para descobrir suas coordenadas atuais (latitude e longitude).
+2. Anote os valores de **latitude** e **longitude** exibidos.
+3. Abra as configurações do script no Tampermonkey e informe suas coordenadas nos campos correspondentes.
 
-**Para descobrir as coordenadas do seu local:**
-
-1. Acesse: 👉 [https://mylocation.org/](https://mylocation.org/)
-2. Anote a **Latitude** e **Longitude** exibidas.
-
-**Para editar as coordenadas no script:**
-
-1. Abra o **Painel do Tampermonkey** → clique no script **"Pontomais auto bater ponto"** → **Editar**.
-2. Localize o trecho abaixo no código:
-
-```javascript
-coords: {
-    latitude: -28.6780227,
-    longitude: -49.3735495,
-    accuracy: 10,
-```
-
-3. Substitua os valores de `latitude` e `longitude` pelas coordenadas obtidas no passo anterior.
-4. Clique em **Salvar** (ou `Ctrl+S`).
+> 📍 **Dica:** Verifique se a localização exibida corresponde ao seu local de trabalho para evitar divergências no registro de ponto.
 
 ---
 
-### 7. Acessar e Manter o Site do Pontomais Aberto
+## ⚠️ Aviso Importante: Manter o Site Pontomais Aberto
 
-Para que o script funcione automaticamente, **o site do Pontomais deve estar aberto e você precisa estar logado**:
+Para que o script funcione corretamente e consiga registrar o ponto automaticamente no horário agendado:
 
-1. Acesse: 👉 [https://app2.pontomais.com.br/registrar-ponto](https://app2.pontomais.com.br/registrar-ponto)
-2. Faça login com suas credenciais.
-3. **Mantenha esta aba aberta** durante todo o dia de trabalho — o script monitora a página a cada 10 segundos e bate o ponto automaticamente nos horários configurados.
+1. Acesse o site do **Pontomais**: [https://app.pontomais.com.br](https://app.pontomais.com.br)
+2. **Faça login** com suas credenciais.
+3. **Mantenha a aba do Pontomais aberta** no navegador durante todo o período em que deseja que o ponto seja batido automaticamente.
 
-> ⚠️ **Não feche esta aba!** O script só funciona enquanto a página do Pontomais estiver aberta no Chrome.
-
----
-
-## 🕹️ Como Usar
-
-### Batida Automática (Agendada)
-
-O script bate o ponto automaticamente nos seguintes horários base (com variação aleatória de 1–13 minutos para parecer mais natural):
-
-| Evento        | Horário Base |
-|---------------|--------------|
-| Entrada       | 09:10        |
-| Saída almoço  | 12:03        |
-| Retorno almoço| 13:01        |
-| Saída         | Calculado automaticamente para completar 8h líquidas de trabalho |
-
-> O horário de saída é calculado automaticamente com base no horário de entrada e na duração do almoço, garantindo sempre **8 horas líquidas** de trabalho.
+> 🔔 **Importante:** O script só consegue executar se a aba do Pontomais estiver aberta e você estiver autenticado. Não feche a aba nem faça logout.
 
 ---
 
-### Batida Manual
+## Resumo dos Passos
 
-Você pode acionar o ponto manualmente de duas formas:
-
-**Opção 1 — Botão flutuante na página:**
-- Ao acessar o site do Pontomais, um botão azul **"👊 Punch now"** aparecerá no canto superior direito da página.
-- Clique nele para bater o ponto imediatamente.
-
-**Opção 2 — Menu do Tampermonkey:**
-- Clique no ícone do **Tampermonkey** na barra de ferramentas do Chrome.
-- Selecione **"👊 Punch now"** no menu.
-
----
-
-## 🔔 Notificações
-
-O script exibe notificações do sistema (ou toasts na página) informando:
-- Quando o fluxo de batida de ponto foi iniciado.
-- Quando o ponto foi confirmado com sucesso.
-- Em caso de erro (botão não encontrado, etc.).
+| Passo | Ação |
+|-------|------|
+| 1 | Instalar a extensão Tampermonkey no Chrome |
+| 2 | Ativar o Modo de Desenvolvedor em `chrome://extensions/` |
+| 3 | Permitir Scripts de Usuário nas configurações do Tampermonkey |
+| 4 | Instalar o script via Greasyfork |
+| 5 | Configurar a geolocalização com seus dados reais |
+| 6 | Acessar e manter o site do Pontomais aberto e logado |
 
 ---
 
-## 🐛 Suporte e Problemas
-
-- Repositório no GitHub: 👉 [https://github.com/eazevedoflaviashpc/tampermonkey-pontomais](https://github.com/eazevedoflaviashpc/tampermonkey-pontomais)
-- Abra uma issue em: 👉 [https://github.com/eazevedoflaviashpc/tampermonkey-pontomais/issues](https://github.com/eazevedoflaviashpc/tampermonkey-pontomais/issues)
-
----
-
-## 📄 Licença
-
-MIT License — uso livre para fins pessoais.
+*Em caso de dúvidas ou problemas, consulte a página do script no Greasyfork ou abra uma issue.*
