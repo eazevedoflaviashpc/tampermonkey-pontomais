@@ -10,7 +10,7 @@
 >
 > É **vetado** o uso deste script para burlar sistemas de controle de ponto. As consequências podem variar de acordo com a política de cada empresa — podendo incluir advertências, demissão por justa causa e até implicações legais.
 >
-> > 🧾 **Antes de executá-lo em produção (caso ainda não tenha te convencido) faça o seguinte: coloque todos os seus boletos na mesa e medite se vale a pena.**
+> > 🧾 **Se estiver cogitando executá-lo em produção - caso ainda não tenha te convencido - faça o seguinte, coloque todos os seus boletos na mesa e medite: "Mas vale a pena?"**
 >
 > **O autor não se responsabiliza por qualquer uso indevido desta ferramenta.**
 ---
