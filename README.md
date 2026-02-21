@@ -19,7 +19,7 @@
 
 ---
 
-Este guia explica como instalar e configurar o script **Pontomais Automator (agendado)** usando a extensão Tampermonkey no Google Chrome.
+Este guia explica como instalar e configurar o **Pontomais Automator** e o **Test Mode** usando a extensão Tampermonkey no Google Chrome.
 
 ---
 
@@ -59,14 +59,35 @@ Para que scripts de usuário funcionem corretamente, é necessário habilitar o 
 
 ---
 
-## 4. Instalar o Script
+## 4. Instalar o Script Principal
 
 1. Acesse o script pelo link abaixo:
-   👉 [[https://greasyfork.org/en/scripts/566798-pontomais-automator-agendado](https://greasyfork.org/en/scripts/566798-pontomais-automator-agendado)]
+   👉 [https://greasyfork.org/en/scripts/566798-pontomais-automator-florian%C3%B3polis-holidays](https://greasyfork.org/en/scripts/566798-pontomais-automator-florian%C3%B3polis-holidays)
 2. Na página do script, clique no botão verde **"Instalar este script"**.
 3. O Tampermonkey abrirá uma nova aba mostrando os detalhes do script.
 4. Clique em **"Instalar"** para confirmar.
 5. O script estará ativo e pronto para uso.
+
+---
+
+## 5. Instalar o Script de Teste (Test Mode) 🧪
+
+O **Test Mode** é um script auxiliar que permite verificar se as notificações do Telegram estão funcionando corretamente e se a lógica de feriados/fins de semana está sendo aplicada — **sem registrar nenhum ponto de verdade**.
+
+1. Acesse o script de teste pelo link abaixo:
+   👉 [https://greasyfork.org/en/scripts/566978-pontomais-automator-test-mode](https://greasyfork.org/en/scripts/566978-pontomais-automator-test-mode)
+2. Clique em **"Instalar este script"** e confirme no Tampermonkey.
+3. Com o site do Pontomais aberto, pressione **`Cmd+Shift+K`** (Mac) ou **`Ctrl+Shift+K`** (Windows) para disparar o teste.
+
+### O que o Test Mode faz:
+
+| Situação | Mensagem no Telegram |
+|----------|----------------------|
+| Dia útil normal | ✅ Informa o horário simulado em que o ponto *seria* registrado |
+| Fim de semana | 😴 Informa que nenhuma ação seria executada |
+| Feriado | 🏖️ Informa que nenhuma ação seria executada |
+
+> 🔒 **O Test Mode nunca clica em nada no site.** É 100% seguro de executar a qualquer momento.
 
 ---
 
@@ -94,6 +115,15 @@ Para que o script funcione corretamente e consiga registrar o ponto automaticame
 
 ---
 
+## O que há de novo — v1.4.1
+
+- **Botão flutuante na tela** — um botão **"⏱ Bater Ponto Agora"** aparece no canto inferior direito da página, permitindo disparar o ponto manualmente a qualquer momento. Ele respeita as mesmas regras de fim de semana e feriado do agendamento automático.
+- **Notificação do Telegram corrigida** — substituição de `GM_xmlhttpRequest` por `fetch`, resolvendo o problema em que as notificações não eram enviadas.
+- **Mensagem de inicialização inteligente** — ao carregar a página, o script envia uma mensagem no Telegram informando os horários agendados para o dia, ou avisando que não há ação prevista (fim de semana ou feriado).
+- **Script de Teste (Test Mode)** — script separado para validar a integração com o Telegram e a lógica de dias sem disparar nenhuma ação real (ver seção acima).
+
+---
+
 ## Resumo dos Passos
 
 | Passo | Ação |
@@ -101,9 +131,11 @@ Para que o script funcione corretamente e consiga registrar o ponto automaticame
 | 1 | Instalar a extensão Tampermonkey no Chrome |
 | 2 | Ativar o Modo de Desenvolvedor em `chrome://extensions/` |
 | 3 | Permitir Scripts de Usuário nas configurações do Tampermonkey |
-| 4 | Instalar o script via Greasyfork |
-| 5 | Configurar a geolocalização com seus dados reais |
-| 6 | Acessar e manter o site do Pontomais aberto e logado |
+| 4 | Instalar o script principal via Greasyfork |
+| 5 | Instalar o script de teste (Test Mode) via Greasyfork |
+| 6 | Configurar a geolocalização com seus dados reais |
+| 7 | Acessar e manter o site do Pontomais aberto e logado |
+| 8 | Pressionar `Cmd+Shift+K` para testar a integração com o Telegram |
 
 ---
 
